@@ -1,0 +1,7 @@
+<%= turbo_stream.replace "paragraph_#{@old_paragraph}" do %>
+  <%= render "paragraph_#{@new_paragraph}" %>
+<% end %>
+
+<%= turbo_stream.append "logs" do %>
+  <p><%= @log %></p>
+<% end %>

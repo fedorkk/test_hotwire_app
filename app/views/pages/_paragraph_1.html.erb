@@ -1,0 +1,16 @@
+  <%= turbo_frame_tag 'current_paragraph' do %>
+    <p>In this article I want to tell you about my experiments with Hotwire - a new technology for writing dynamic one-page applications without using complex frontend frameworks. The basic idea behind Hotwire is that when some action is taken on a page, a request is sent to the server, where a new piece of html document is rendered, which is sent back and replaces or supplements the existing page.</p>
+    <p>The technology consists of several components:</p>
+    <ul>
+      <li>Turbo:
+        <ul>
+          <li>Turbo Drive is responsible for replacing parts of the HTML on the page and prevents the page from completely reloading when a request is sent. This is actually the engine on which the entire technology runs.</li>
+          <li>Turbo Frames allows you to divide pages into separate parts that can be modified separately from the entire page.</li>
+          <li>Turbo Streams add flexibility in handling server responses. With them, you can not only replace a single frame or an entire page, but also perform many different operations on a single request.</li>
+          <li>Turbo Native will be used in the future to create mobile applications, but is still in development.</li>
+        </ul>
+      </li>
+      <li>Stimulus is a JS library that replaces parts of html documents and makes requests to the server.</li>
+    </ul>
+    <%= link_to "Next", turbo_frame_change_path(paragraph: 2), data: { turbo_frame: "current_paragraph" } %>
+  <% end %>

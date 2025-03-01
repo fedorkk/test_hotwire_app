@@ -1,0 +1,7 @@
+<div id='paragraph_2'>
+  <%= link_to "Previous", turbo_streams_call_path(old_paragraph: 2, new_paragraph: 1), data: {turbo_stream: true} %>
+  <p>I will use bootstrap to add styles to the page. To do this, I will create an application with the <code>--css=bootstrap</code> directive.
+  First, lets add a navigation bar to our <code>app/views/layouts/application.html.erb</code> layout. As well as the first route and controller for static pages <code>app/controllers/pages_controller.rb</code>.</p>
+  <p>Let's launch our application and see what happens when we click on the links in the navigation bar. If you open the developer panel in a browser and look at the network requests, you can see that the page is not reloaded completely. Instead, TurboJS makes a request to the server, loads only the html inside the <code>&lt;body&gt;&lt;/body&gt;</code> tags and replaces it. The css styles, JS scripts as well as the entire layout are not changed. In fact TurboDrive works in rails 7/8 automatically and you may not even notice it.</p>
+  <%= link_to "Next", turbo_streams_call_path(old_paragraph: 2, new_paragraph: 3), data: {turbo_stream: true} %>
+</div>

@@ -1,0 +1,5 @@
+<%= form_with model: @address do |f| %>
+  <%= turbo_stream.replace "cities_select" do %>
+    <%= render partial: "cities_select", locals: { f: f } %>
+  <% end %>
+<% end %>

@@ -1,0 +1,4 @@
+<div id='cities_select' >
+  <%= f.label "City", class: "form-label" %>
+  <%= f.select :city_id, @cities, {}, class: "form-select", data: { action: 'change->addresses#city_change' } %>
+</div>

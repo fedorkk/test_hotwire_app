@@ -1,0 +1,11 @@
+<%= form_with(model: @address, local: true) do |f| %>
+  <div data-controller="addresses" >
+      <%= f.label "Country", class: "form-label" %>
+      <%= f.select :country_id, @countries, {}, class: "form-select", data: { action: 'change->addresses#country_change' } %>
+
+    <br />
+    <%= render partial: "cities_select", locals: { f: f } %>
+    <br />
+    <%= render partial: "streets_select", locals: { f: f } %>
+  </div>
+<% end %>
