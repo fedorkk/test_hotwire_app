@@ -1,4 +1,4 @@
-This readme is also available in [Russian]()
+This readme is also available in [Russian](https://github.com/fedorkk/test_hotwire_app/blob/main/README_RU.md)
 # Startup
 To play with the code you need:
 - ruby 3.3.5
