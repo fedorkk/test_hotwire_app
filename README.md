@@ -9,6 +9,7 @@ To start the app:
 - `git pull`
 - `bundle install`
 - `bundle exec rails db:create db:migrate db:seed`
+- `bundle exec rails css:install:bootstrap`
 - `bundle exec rails s`
 
 You can open the site on [http://127.0.0.1:3000](http://127.0.0.1:3000)
